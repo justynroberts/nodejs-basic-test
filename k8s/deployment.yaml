@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    app: nodeJs
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nodeJs
+  template:
+    metadata:
+      labels:
+        app: nodeJs
+    spec:
+      containers:
+      - name: sample-node-app
+        image: gcr.io/instana-solution-architects/node-app:v3
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi 
+          requests:
+            cpu: 5m
+            memory: 5Mi
+     
