@@ -3,7 +3,7 @@
 Sample Node.js app on Kubernetes
 
 ## Requirements
-
+You should modify your repo in the MakeFile and Deployment to represent your own GCP project.
 
 ## Preparation
 
